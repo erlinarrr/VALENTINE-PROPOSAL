@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Proposal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-pink-100 flex items-center justify-center min-h-screen">
+  <div class="text-center">
+    <h1 class="text-4xl font-bold text-pink-600 mb-4">Will You Be My Valentine? 💖</h1>
+    <p class="text-lg text-gray-700 mb-6">Click the button below to see my special message!</p>
+
+    <button id="revealButton" class="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg shadow-lg transition">
+      Reveal the Message
+    </button>
+
+    <div id="message" class="hidden mt-6 text-xl font-semibold text-pink-800 fade-in">
+      🌹 You mean the world to me. Will you be mine? 💍
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('revealButton').addEventListener('click', function() {
+      const message = document.getElementById('message');
+      message.classList.remove('hidden');
+      message.classList.add('fade-in');
+    });
+  </script>
+</body>
+</html>
